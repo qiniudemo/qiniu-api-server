@@ -30,12 +30,12 @@ if ($reqContentType=="application/x-www-form-urlencoded")
 	$exParam2=$_POST["exParam2"];
 	$exParam3=$_POST["exParam3"];	
 	$respArray=array(
-		"fname"=>$fname."-".$time,
-		"etag"=>$etag."-".$time,
-		"key"=>$key."-".$time,
-		"exParam1"=>$exParam1."-".$time,
-		"exParam2"=>$exParam2."-".$time,
-		"exParam3"=>$exParam3."-".$time,
+		"fname"=>$fname."- callback ".$time,
+		"etag"=>$etag."- callback ".$time,
+		"key"=>$key."- callback ".$time,
+		"exParam1"=>$exParam1."- callback ".$time,
+		"exParam2"=>$exParam2."- callback ".$time,
+		"exParam3"=>$exParam3."- callback ".$time,
 	);
 	$respBody=json_encode($respArray);
 	echo $respBody;
@@ -53,12 +53,12 @@ elseif($reqContentType=="application/json")
 	$exParam2=$jsonData["exParam2"];
 	$exParam3=$jsonData["exParam3"];
 	$respArray=array(
-		"fname"=>$fname."-".$time,
-		"etag"=>$etag."-".$time,
-		"key"=>$key."-".$time,
-		"exParam1"=>$exParam1."-".$time,
-		"exParam2"=>$exParam2."-".$time,
-		"exParam3"=>$exParam3."-".$time,
+		"fname"=>$fname."- callback ".$time,
+		"etag"=>$etag."- callback ".$time,
+		"key"=>$key."- callback ".$time,
+		"exParam1"=>$exParam1."- callback ".$time,
+		"exParam2"=>$exParam2."- callback ".$time,
+		"exParam3"=>$exParam3."- callback ".$time,
 	);
 	$respBody=json_encode($respArray);
 	echo $respBody;

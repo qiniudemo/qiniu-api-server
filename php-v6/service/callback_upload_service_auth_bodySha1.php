@@ -1,7 +1,7 @@
 <?php
 header("Content-Type: application/json; charset=utf-8");
-require("../../qiniu_config.php");
-require ("../../lib/qiniu/auth_digest.php");
+require("../config.php");
+require ("../qiniu/auth_digest.php");
 //the client will send fname,etag,key and three extra parameters here
 //in the format of a url query string or json data
 $allHeaders= getallheaders();

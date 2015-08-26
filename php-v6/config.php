@@ -17,3 +17,6 @@ $APP_CALLBACK_ROOT="http://192.168.210.162/~jemy/qiniu-api-server/php-v6";
 
 //图片显示域名
 $ImageViewBucketDomain="http://7u2fo5.com1.z0.glb.clouddn.com";
+
+//音视频转码队列，可以到后台 https://portal.qiniu.com/mps/pipeline 设置
+$MPS_Pipeline="jemy";

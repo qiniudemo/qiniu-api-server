@@ -6,7 +6,7 @@ require_once("../../qiniu/utils.php");
 
 Qiniu_SetKeys($Qiniu_AccessKey, $Qiniu_SecretKey);
 $putPolicy = new Qiniu_RS_PutPolicy($Qiniu_Public_Bucket);
-
+$putPolicy->DeleteAfterDays = $Delete_After_Days;
 //生成一个文件名称
 $saveKey = "qiniu_cloud_storage_" . time();
 $putPolicy->SaveKey = "qiniu_cloud_storage_" . time();

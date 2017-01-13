@@ -5,6 +5,7 @@ require_once("../../lib/qiniu/utils.php");
 require_once("../../qiniu_config.php");
 Qiniu_SetKeys($Qiniu_AccessKey, $Qiniu_SecretKey);
 $putPolicy = new Qiniu_RS_PutPolicy($Qiniu_Public_Bucket);
+$putPolicy->DeleteAfterDays = $Delete_After_Days;
 $saveBucket=$Qiniu_Public_Bucket;
 $saveKey="test_2.mp4";
 //转码指令

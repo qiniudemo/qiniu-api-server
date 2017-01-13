@@ -5,7 +5,7 @@ require_once("../../config.php");
 
 Qiniu_SetKeys($Qiniu_AccessKey, $Qiniu_SecretKey);
 $putPolicy = new Qiniu_RS_PutPolicy($Qiniu_Public_Bucket);
-
+$putPolicy->DeleteAfterDays = $Delete_After_Days;
 //use a random key for saveKey
 $putPolicy->SaveKey = "qiniu_cloud_storage_" . time();
 $putPolicy->MimeLimit="image/*";

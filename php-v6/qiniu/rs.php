@@ -58,6 +58,7 @@ class Qiniu_RS_PutPolicy
 	public $PersistentNotifyUrl;
 	public $FopTimeout;
 	public $MimeLimit;
+        public $DeleteAfterDays;
 
 	public function __construct($scope)
 	{
@@ -118,7 +119,9 @@ class Qiniu_RS_PutPolicy
 		if (!empty($this->MimeLimit)) {
 			$policy['mimeLimit'] = $this->MimeLimit;
 		}
-
+                if (!empty($this->DeleteAfterDays)) {
+                        $policy['deleteAfterDays'] = $this->DeleteAfterDays;
+                }
 
 		$b = json_encode($policy);
 		return Qiniu_SignWithData($mac, $b);

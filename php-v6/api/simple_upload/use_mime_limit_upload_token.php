@@ -5,7 +5,7 @@ require_once("../../config.php");
 
 Qiniu_SetKeys($Qiniu_AccessKey, $Qiniu_SecretKey);
 $putPolicy = new Qiniu_RS_PutPolicy($Qiniu_Public_Bucket);
-
+$putPolicy->DeleteAfterDays = $Delete_After_Days;
 #only images can be uploaded
 $imageOnlyLimit = "image/*";
 
